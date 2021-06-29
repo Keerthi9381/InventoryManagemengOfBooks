@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>homepage</title>
+    </head>
+    <body>
+      <center>
+          <h1>Books Inventory</h1>
+          <div><h3>A book inventory records the amount of books currently in stock at a store, library, or collection.</h3></div>
+          <table style="width: 75%;">
+              
+              <tr>
+                  <th>BookId</th>
+                  <th>Name</th>
+                  <th>author</th>
+                  <th>stock</th>
+                  <th>cost</th>
+              </tr>
+              <% for(var i=0;i<data.length;i++){%>
+                  <tr>
+                      <td><%= data[i].BookId %></td>
+                      <td><%= data[i].Name %></td>
+                      <td><%= data[i].author %></td>
+                      <td><%= data[i].stock %></td>
+                      <td><%= data[i].cost%></td>
+                  </tr>
+              <%}
+              %>
+          </table>
+          <a href="/create" class="c2">Add New Book</a><br><br>
+          <a href="/updatestock" class="c2">Update Book</a><br><br>
+          <a href="/deleteproduct" class="c2">Delete Book</a>
+      </center>
+  </body>
+</html>
